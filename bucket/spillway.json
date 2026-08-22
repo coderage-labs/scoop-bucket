@@ -1,0 +1,34 @@
+{
+    "version": "0.5.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/coderage-labs/spillway/releases/download/v0.5.0/spillway_v0.5.0_windows_amd64.zip",
+            "bin": [
+                "spillway.exe"
+            ],
+            "hash": "0d678fc240ba318718f5d6583c79d4d149a30979d9407f8422efe668788ca856"
+        },
+        "arm64": {
+            "url": "https://github.com/coderage-labs/spillway/releases/download/v0.5.0/spillway_v0.5.0_windows_arm64.zip",
+            "bin": [
+                "spillway.exe"
+            ],
+            "hash": "f3cd93e5daa24dbe0440a6ff424f9a424c548930e4c18da3e207398faa65de67"
+        }
+    },
+    "homepage": "https://github.com/coderage-labs/spillway",
+    "license": "MIT",
+    "description": "Pool your own AI subscription accounts behind one local proxy",
+    "post_install": [
+        "schtasks /Query /TN \"\\dev.coderage.spillway\" *\u003e $null",
+        "if ($LASTEXITCODE -eq 0) {",
+        "  $exe = (Get-Command spillway.exe -ErrorAction SilentlyContinue).Source",
+        "  if ($exe) {",
+        "    Write-Host \"Restarting the spillway service on the new binary\"",
+        "    \u0026 $exe service install | Out-Null",
+        "  } else {",
+        "    Write-Host 'spillway: shim not found - run: spillway service install'",
+        "  }",
+        "}"
+    ]
+}
