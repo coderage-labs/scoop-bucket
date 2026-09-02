@@ -1,19 +1,19 @@
 {
-    "version": "0.19.0",
+    "version": "0.19.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/coderage-labs/spillway/releases/download/v0.19.0/spillway_v0.19.0_windows_amd64.zip",
+            "url": "https://github.com/coderage-labs/spillway/releases/download/v0.19.1/spillway_v0.19.1_windows_amd64.zip",
             "bin": [
                 "spillway.exe"
             ],
-            "hash": "bbc46e012b45fad513d350417ddf067567472907838c0e8b64d44627e9e5653e"
+            "hash": "40f015739258abb3876848a986c82042a8acaaa01d4d4d81933db5f3b08ec0fc"
         },
         "arm64": {
-            "url": "https://github.com/coderage-labs/spillway/releases/download/v0.19.0/spillway_v0.19.0_windows_arm64.zip",
+            "url": "https://github.com/coderage-labs/spillway/releases/download/v0.19.1/spillway_v0.19.1_windows_arm64.zip",
             "bin": [
                 "spillway.exe"
             ],
-            "hash": "6947632b2efcd30e3bc1c31557fab3a7704ab789e0f8a9af05f0ddad30283fd2"
+            "hash": "ae534ac0f244dd507a3a7a5140131beda8b8c5c51f1b9c411552e5d04319ea74"
         }
     },
     "homepage": "https://github.com/coderage-labs/spillway",
